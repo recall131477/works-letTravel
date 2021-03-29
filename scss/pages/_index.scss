@@ -240,6 +240,12 @@ body {
   padding: 50px 0 220px;
 }
 
+@media (max-width: 768px) {
+  .search-area {
+    padding: 50px 0 260px;
+  }
+}
+
 .search-area p {
   color: #818A91;
 }
@@ -449,4 +455,12 @@ body {
   right: 0;
   width: 250px;
   max-height: 250px;
+}
+
+@media (max-width: 768px) {
+  .chart {
+    margin-top: 100px; 
+    width: 200px;
+    right: auto;
+  }
 }

@@ -1,0 +1,28 @@
+// 文字置中、左、右
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+// 文字置中、左、右RWD
+@each $breakpontKey, $breakpointValue in $mq-breakpoints {
+  @media (max-width: #{$breakpointValue}px) {
+    @each $key, $value in $font {
+      .#{$breakpontKey}\:text-center {
+        text-align: center;
+      }  
+      .#{$breakpontKey}\:text-left {
+        text-align: left;
+      }
+      .#{$breakpontKey}\:text-right {
+        text-align: right;
+      }
+    }
+  }
+}

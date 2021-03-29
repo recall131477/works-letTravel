@@ -1,0 +1,26 @@
+// 文字大小
+$font:(
+  sm: 0.875rem,  // 14px
+  base: 1rem,
+  lg: 1.125rem,  // 18px
+  xl: 1.25rem,   // 20px
+  2xl: 2.625rem, // 42px
+  3xl: 3rem      // 48px
+);
+
+@each $key,$value in $font {
+  .text-#{$key}{
+    font-size: $value; 
+  }
+}
+
+// 文字大小RWD
+@each $breakpontKey, $breakpointValue in $mq-breakpoints {
+  @media (max-width: #{$breakpointValue}px) {
+    @each $key,$value in $font {
+      .#{$breakpontKey}\:text-#{$key}{
+        font-size: $value; 
+      }  
+    }
+  }
+}

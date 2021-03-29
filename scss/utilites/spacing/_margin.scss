@@ -1,0 +1,51 @@
+@each $key,$value in $directionMap {
+  @each $marginKey, $marginValue in $margin {
+    @if $key == a{
+      .m-#{$marginKey} {
+        margin: $marginValue;
+      }
+    }@else if $key == y {
+      .m#{$key}-#{$marginKey} {
+        margin-top: $marginValue;
+        margin-bottom: $marginValue;
+      }
+    }@else if $key == x {
+      .m#{$key}-#{$marginKey} {
+        margin-left: $marginValue;
+        margin-right: $marginValue;
+      }
+    }@else{
+      .m#{$key}-#{$marginKey}{
+        margin-#{$value}: $marginValue;
+      }
+    }
+  }
+}
+
+@each $breakpontKey, $breakpointValue in $mq-breakpoints {
+  @media (min-width: #{$breakpointValue}px) {
+    @each $key,$value in $directionMap {
+      @each $marginKey, $marginValue in $margin {
+        @if $key == a{
+          .#{$breakpontKey}\:m-#{$marginKey} {
+            margin: $marginValue;
+          }
+        }@else if $key == y {
+          .#{$breakpontKey}\:m#{$key}-#{$marginKey} {
+            margin-top: $marginValue;
+            margin-bottom: $marginValue;
+          }
+        }@else if $key == x {
+          .#{$breakpontKey}\:m#{$key}-#{$marginKey} {
+            margin-left: $marginValue;
+            margin-right: $marginValue;
+          }
+        }@else{
+          .#{$breakpontKey}\:m#{$key}-#{$marginKey}{
+            margin-#{$value}: $marginValue;
+          }
+        }
+      }
+    }
+  }
+}

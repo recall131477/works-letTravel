@@ -76,6 +76,7 @@ function renderC3() {
 
   let newData = [];
   let area = Object.keys(totalObj); // ["高雄", "台北", "台中"]
+  [area[0], area[1], area[2]] = [area[1], area[2], area[0]]; // 重組陣列中資料順序
   area.forEach(function (item, index) {
     let ary = [];
     ary.push(item, totalObj[item]);
@@ -89,9 +90,9 @@ function renderC3() {
       columns: newData,
       type: 'donut',
       colors: {
-        "高雄": "#E68618",
-        "台中": "#5151D3",
         "台北": "#26BFC7",
+        "台中": "#5151D3",
+        "高雄": "#E68618"
       }
     },
     donut: {

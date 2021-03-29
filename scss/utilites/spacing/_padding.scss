@@ -1,0 +1,51 @@
+@each $key,$value in $directionMap {
+  @each $paddingKey, $paddingValue in $padding {
+    @if $key == a{
+      .p-#{$paddingKey} {
+        padding: $paddingValue;
+      }
+    }@else if $key == y {
+      .p#{$key}-#{$paddingKey} {
+        padding-top: $paddingValue;
+        padding-bottom: $paddingValue;
+      }
+    }@else if $key == x {
+      .p#{$key}-#{$paddingKey} {
+        padding-left: $paddingValue;
+        padding-right: $paddingValue;
+      }
+    }@else{
+      .p#{$key}-#{$paddingKey}{
+        padding-#{$value}: $paddingValue;
+      }
+    }
+  }
+}
+
+@each $breakpontKey, $breakpointValue in $mq-breakpoints {
+  @media (min-width: #{$breakpointValue}px) {
+    @each $key,$value in $directionMap {
+      @each $paddingKey, $paddingValue in $padding {
+        @if $key == a{
+          .#{$breakpontKey}\:p-#{$paddingKey} {
+            padding: $paddingValue;
+          }
+        }@else if $key == y {
+          .#{$breakpontKey}\:p#{$key}-#{$paddingKey} {
+            padding-top: $paddingValue;
+            padding-bottom: $paddingValue;
+          }
+        }@else if $key == x {
+          .#{$breakpontKey}\:p#{$key}-#{$paddingKey} {
+            padding-left: $paddingValue;
+            padding-right: $paddingValue;
+          }
+        }@else{
+          .#{$breakpontKey}\:p#{$key}-#{$paddingKey}{
+            padding-#{$value}: $paddingValue;
+          }
+        }
+      }
+    }
+  }
+}
