@@ -1,0 +1,44 @@
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #333333;
+  line-height: 1.5;
+}
+
+img{
+  max-width: 100%;
+	height: auto;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+input:focus{
+  outline: none;
+}
+
+P{
+  margin: 0;
+  line-height: 2;
+  color: #777777;
+}
+
+ul,ol{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+:focus{
+  outline: none;
+}
