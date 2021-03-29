@@ -68,9 +68,9 @@ body { font-family: "Microsoft JhengHei"; }
 
 @media (max-width: 767px) { .main-content { padding-bottom: 30px; } }
 
-.search-area { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; max-width: 920px; margin: 0 auto; padding: 50px 0 220px; }
+.search-area { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; max-width: 920px; margin: 0 auto; padding: 50px 0; }
 
-@media (max-width: 768px) { .search-area { padding: 50px 0 260px; } }
+@media (max-width: 768px) { .search-area { padding: 30px 0; } }
 
 .search-area p { color: #818A91; }
 
@@ -126,9 +126,9 @@ body { font-family: "Microsoft JhengHei"; }
 
 @media (max-width: 768px) { .cantFind-area { margin-top: 0px; } }
 
-.chart { position: absolute !important; top: 30px; right: 0; width: 250px; max-height: 250px; }
+.chart { margin-top: 50px; margin-left: auto; }
 
-@media (max-width: 768px) { .chart { margin-top: 100px; width: 200px; right: auto; } }
+@media (max-width: 768px) { .chart { margin-top: 30px; margin-left: 0; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document ========================================================================== */

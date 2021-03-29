@@ -237,14 +237,15 @@ body {
           align-items: center;
   max-width: 920px;
   margin: 0 auto;
-  padding: 50px 0 220px;
+  padding: 50px 0;
 }
 
 @media (max-width: 768px) {
   .search-area {
-    padding: 50px 0 260px;
+    padding: 30px 0;
   }
 }
+
 
 .search-area p {
   color: #818A91;
@@ -450,17 +451,13 @@ body {
 }
 
 .chart {
-  position: absolute !important;
-  top: 30px;
-  right: 0;
-  width: 250px;
-  max-height: 250px;
+  margin-top: 50px;
+  margin-left: auto;
 }
 
 @media (max-width: 768px) {
   .chart {
-    margin-top: 100px; 
-    width: 200px;
-    right: auto;
-  }
+    margin-top: 30px;
+    margin-left: 0;
+  } 
 }

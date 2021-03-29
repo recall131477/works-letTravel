@@ -96,8 +96,16 @@ function renderC3() {
       }
     },
     donut: {
-      title: "套票地區比重"
-    }
+      title: "套票地區比重",
+      width: 10,
+      label: {
+        threshold: 1
+      },
+    },
+    size: {
+      height: 160,
+      width: 160
+    },
   });
 }
 
